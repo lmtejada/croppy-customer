@@ -3,7 +3,7 @@ import { ScrollView, StyleSheet, Text } from 'react-native';
 
 import { COLORS } from '../helpers/colors';
 import Container from '../components/common/Container';
-import ProductList from '../components/ProductList';
+import ProductsList from '../components/ProductsList';
 import SearchBar from '../components/common/SearchBar';
 
 const products = [
@@ -38,13 +38,13 @@ const HomeScreen = () => {
         onTermSubmit={null}
       />
       <ScrollView
-        contentContainerStyle={{ paddingBottom: 48 }}
+        contentContainerStyle={{ paddingBottom: 32 }}
         showsVerticalScrollIndicator={false}
       >
         <Text style={{ ...styles.title, marginTop: 0 }}>Frutas</Text>
-        <ProductList products={products} />
+        <ProductsList products={products} />
         <Text style={styles.title}>Verduras</Text>
-        <ProductList products={products} />
+        <ProductsList products={products} />
       </ScrollView>
     </Container>
   );

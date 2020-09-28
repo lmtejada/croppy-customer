@@ -19,7 +19,8 @@ const Container = ({ children, isFlex }) => {
 const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
-    marginHorizontal: 16
+    marginHorizontal: 16,
+    marginBottom: 16
   }
 });
 

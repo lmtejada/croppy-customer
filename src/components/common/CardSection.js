@@ -2,9 +2,13 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { COLORS } from '../../helpers/colors';
 
-const CardSection = ({ children }) => {
+const CardSection = ({ children, isLast, isRow }) => {
   return (
-    <View style={styles.cardSection}>
+    <View style={[
+      styles.cardSection,
+      isLast && { borderBottomWidth: 0 },
+      isRow && { flexDirection: 'row' }
+    ]}>
       {children}
     </View>
   );
@@ -15,7 +19,6 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
     borderColor: COLORS.lightGray,
     borderBottomWidth: 1,
-    flexDirection: 'row',
     justifyContent: 'flex-start',
     padding: 8,
     position: 'relative'
